@@ -1,0 +1,9 @@
+@media screen and (width <= 650px) {
+    .principal{
+        width: 90vw;
+    }
+
+    .conteiner__titulo {
+        font: 1rem;
+    }
+}

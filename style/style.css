@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --cor-preto: #000000;
+    --cor-branco: #ffffff;
+    --cor-laranja: #FF7B00;
+    --cor-laranja-claro: #ff7b00af;
+    --cor-cinza: #80808096;
+    --cor-fundo-perguntas: #121212;
+
+    --fonte: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--fonte);
+    background: var(--cor-preto) url('../assets/background.jpg') no-repeat left center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-branco);
+    overflow-x: hidden;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 45vw;
+    transition: width .5s ease;
+}
+
+.principal__titulo {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.titulo__negrito {
+    font-weight: 600;
+}
+
+.principal__sessao {
+    background-color: var(--cor-fundo-perguntas);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.sessao__conteiner {
+    display: none;
+}
+
+.sessao__conteiner.ativa {
+    display: block;
+}
+
+.conteiner__titulo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.titulo__numero {
+    background-color: var(--cor-laranja);
+    padding: .1rem .8rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.sessao__conteiner > label {
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    margin: .8rem 0;
+    border: 2px solid var(--cor-cinza);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .7s ease;
+}
+
+.sessao__conteiner > label:hover {
+    background-color: var(--cor-laranja-claro);
+}
+
+.sessao__conteiner > input {
+    display: none;
+}
+
+.sessao__conteiner > input:checked + label {
+    background-color: var(--cor-laranja);
+    color: white;
+}
+
+.principal__botoes{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+    color: var(--cor-branco);
+    cursor: pointer;
+    border-radius: 3px;
+    padding: .2rem;
+}
+
+.botoes__nav {
+    border: 1px solid var(--cor-laranja);
+    transition: all .5s ease;
+}
+
+.btn:hover {
+    border: 1px solid var(--cor-laranja);
+    background-color: var(--cor-laranja);
+}
+
+.botoes__enviar a{
+    text-decoration: none;
+    color: var(--cor-branco);
+}
