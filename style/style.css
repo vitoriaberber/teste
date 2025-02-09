@@ -122,12 +122,11 @@ body {
     transition: all .5s ease;
 }
 
-.btn:hover {
+.btn.ativo:hover {
     border: 1px solid var(--cor-laranja);
     background-color: var(--cor-laranja);
 }
 
-.botoes__enviar a{
-    text-decoration: none;
-    color: var(--cor-branco);
+.botoes__enviar{
+    display: none;
 }
